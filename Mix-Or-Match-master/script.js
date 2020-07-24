@@ -1,8 +1,8 @@
-// 1928
+// Stop timmer after play, turn cards over on completion of game, stop game over function from auto call,
 
 class AudioController {
   constructor() {
-this.bgMusic =new Audio('Assets/Audio/creepy.mp3');
+this.bgMusic =new Audio('Assets/Audio/180608_0333.mp3');
 this.flipSound = new Audio('Assets/Audio/flip.wav');
 this.matchedSound = new Audio('Assets/Audio/match.wav');
 this.victorySound = new Audio('Assets/Audio/victory.wav');
@@ -130,7 +130,7 @@ class MixOrMatch {
     clearInterval(this.countDown);
     this.audioController.victory();
     document.getElementById('victory-text').classList.add('visible');
-    this.timer = 0;
+
   }
 
 shuffleCards() {
@@ -166,11 +166,6 @@ cards.forEach(card => {
   });
 });
 }
-
-
-
-
-
 
 if(document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', ready());
